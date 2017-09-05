@@ -1,0 +1,56 @@
+
+<html>
+<head>
+<title>SilverPush</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js" ></script>
+<script src="/js/app.js"></script>
+
+
+
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="https://www.silverpush.co/"><img src="https://dq6rque9q8kvp.cloudfront.net/web/images/logo-white.png"/></a>
+  <span class="navbar-text">
+<a href="https://www.facebook.com/silverpush"><i class="fa fa-facebook" style="font-size:35px; margin-right:0.5em;" aria-hidden="true"></i></a>
+<a href="https://twitter.com/silverpush"><i class="fa fa-twitter"  style="font-size:35px; margin-right:0.5em;" " aria-hidden="true"></i></a>
+<a href="https://www.linkedin.com/company/2808449/"><i class="fa fa-linkedin"  style="font-size:35px;" aria-hidden="true"></i></a>
+   </span>
+  </div>
+</nav>
+
+
+</head>
+<body ng-app="myApp" style="background:#343A40;">
+
+<div ng-controller="myCtrl">
+
+  <div class="alert alert-primary" role="alert">
+<h2> <i class="fa fa-clock-o" style="margin-right:0.5em;" aria-hidden="true"></i>Timer (in seconds): {{time}}</h2>
+  </div>
+
+<div  class="row" style="margin-top:10%;">
+  <div class="col-sm-4">
+  </div>
+<div  class="card" style="width: 24rem;">
+  <div class="card-body">
+
+    <h6 class="card-title"><i class="fa fa-address-card" style="margin-right:2%;" aria-hidden="true"></i><strong>First Name:</strong> {{firstName | uppercase}}</h6>
+    <h6 class="card-title"><i class="fa fa-id-card" style="margin-right:2%;" aria-hidden="true"></i><strong>Last Name:</strong> {{lastName | uppercase}}</h6>
+  <h6 class="card-title">  <i class="fa fa-envelope"style="margin-right:2%;" aria-hidden="true"></i><strong>Email Address:</strong> {{email}}</h6>
+    <h6 class="card-title"><i class="fa fa-phone" style="margin-right:2%;" aria-hidden="true"></i> <strong>Contact Number:</strong> {{contact}}</h6>
+<br>
+    <button style="margin-left:35%;"  ng-click="clickHandler();" class="btn btn-outline-success">Success</button>
+
+  </div>
+</div>
+<div class="col-sm-4">
+</div>
+</div>
+
+
+</div>
+
+
+</body>
+</html>

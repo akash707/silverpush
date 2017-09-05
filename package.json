@@ -1,0 +1,15 @@
+{
+  "name": "silverpush",
+  "version": "1.0.1",
+  "description": "setTimeout",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Akash Shukla",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.4",
+    "nodemon": "^1.12.0"
+  }
+}
