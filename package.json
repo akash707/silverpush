@@ -9,7 +9,10 @@
   "author": "Akash Shukla",
   "license": "ISC",
   "dependencies": {
+    "async": "^2.5.0",
+    "connect-timeout": "^1.9.0",
     "express": "^4.15.4",
-    "nodemon": "^1.12.0"
+    "nodemon": "^1.12.0",
+    "request": "^2.81.0"
   }
 }

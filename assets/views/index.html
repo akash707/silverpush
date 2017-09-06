@@ -29,25 +29,44 @@
 <h2> <i class="fa fa-clock-o" style="margin-right:0.5em;" aria-hidden="true"></i>Timer (in seconds): {{time}}</h2>
   </div>
 
-<div  class="row" style="margin-top:10%;">
-  <div class="col-sm-4">
+<div  class="row" style="margin-top:5%;">
+
+  <div class="col-sm-2">
   </div>
+
+
+
 <div  class="card" style="width: 24rem;">
   <div class="card-body">
-
+<h3 align="center"> Data 1</h3>
     <h6 class="card-title"><i class="fa fa-address-card" style="margin-right:2%;" aria-hidden="true"></i><strong>First Name:</strong> {{firstName | uppercase}}</h6>
     <h6 class="card-title"><i class="fa fa-id-card" style="margin-right:2%;" aria-hidden="true"></i><strong>Last Name:</strong> {{lastName | uppercase}}</h6>
   <h6 class="card-title">  <i class="fa fa-envelope"style="margin-right:2%;" aria-hidden="true"></i><strong>Email Address:</strong> {{email}}</h6>
     <h6 class="card-title"><i class="fa fa-phone" style="margin-right:2%;" aria-hidden="true"></i> <strong>Contact Number:</strong> {{contact}}</h6>
-<br>
-    <button style="margin-left:35%;"  ng-click="clickHandler();" class="btn btn-outline-success">Success</button>
 
   </div>
 </div>
-<div class="col-sm-4">
-</div>
+
+<div class="col-sm-1">
 </div>
 
+<div  class="card" style="width: 24rem;">
+  <div class="card-body">
+<h3 align="center"> Data 2</h3>
+    <h6 class="card-title"><i class="fa fa-address-card" style="margin-right:2%;" aria-hidden="true"></i><strong>First Name:</strong> {{firstName1 | uppercase}}</h6>
+    <h6 class="card-title"><i class="fa fa-id-card" style="margin-right:2%;" aria-hidden="true"></i><strong>Last Name:</strong> {{lastName1 | uppercase}}</h6>
+  <h6 class="card-title">  <i class="fa fa-envelope"style="margin-right:2%;" aria-hidden="true"></i><strong>Email Address:</strong> {{email1}}</h6>
+    <h6 class="card-title"><i class="fa fa-phone" style="margin-right:2%;" aria-hidden="true"></i> <strong>Contact Number:</strong> {{contact1}}</h6>
+
+
+  </div>
+</div>
+
+
+</div>
+<br>
+<br>
+    <button style="margin-left:45%;"  ng-click="clickHandler();" class="btn btn-outline-success">Success</button>
 
 </div>
 
