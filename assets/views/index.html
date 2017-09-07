@@ -5,6 +5,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js" ></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/app.js"></script>
 
 
@@ -21,6 +22,22 @@
 
 
 </head>
+
+<script type="text/javascript">
+  $(function() {
+
+    $("service").on("click",function() {
+      var url = $("#url").val();
+        $.get("http://localhost:3000/data/"+url,
+          function(data){
+      console.log(data);
+    })
+        });
+      });
+
+</script>
+
+
 <body ng-app="myApp" style="background:#343A40;">
 
 <div ng-controller="myCtrl">
@@ -41,32 +58,36 @@
 <h3 align="center"> Data 1</h3>
     <h6 class="card-title"><i class="fa fa-address-card" style="margin-right:2%;" aria-hidden="true"></i><strong>First Name:</strong> {{firstName | uppercase}}</h6>
     <h6 class="card-title"><i class="fa fa-id-card" style="margin-right:2%;" aria-hidden="true"></i><strong>Last Name:</strong> {{lastName | uppercase}}</h6>
-  <h6 class="card-title">  <i class="fa fa-envelope"style="margin-right:2%;" aria-hidden="true"></i><strong>Email Address:</strong> {{email}}</h6>
-    <h6 class="card-title"><i class="fa fa-phone" style="margin-right:2%;" aria-hidden="true"></i> <strong>Contact Number:</strong> {{contact}}</h6>
+  <h6 class="card-title">  <i class="fa fa-user"style="margin-right:2%;" aria-hidden="true"></i><strong>Avatar:</h6>
+    <img  style="border-radius:20px; margin-left:30%;" ng-src="{{image}}" width="30%;"/>
+
 
   </div>
 </div>
 
-<div class="col-sm-1">
-</div>
 
-<div  class="card" style="width: 24rem;">
+<div  class="card"  style="width: 24rem; margin-left:5%;">
   <div class="card-body">
 <h3 align="center"> Data 2</h3>
-    <h6 class="card-title"><i class="fa fa-address-card" style="margin-right:2%;" aria-hidden="true"></i><strong>First Name:</strong> {{firstName1 | uppercase}}</h6>
-    <h6 class="card-title"><i class="fa fa-id-card" style="margin-right:2%;" aria-hidden="true"></i><strong>Last Name:</strong> {{lastName1 | uppercase}}</h6>
-  <h6 class="card-title">  <i class="fa fa-envelope"style="margin-right:2%;" aria-hidden="true"></i><strong>Email Address:</strong> {{email1}}</h6>
-    <h6 class="card-title"><i class="fa fa-phone" style="margin-right:2%;" aria-hidden="true"></i> <strong>Contact Number:</strong> {{contact1}}</h6>
+    <h6 class="card-title"><i class="fa fa-address-card" style="margin-right:2%;" aria-hidden="true"></i><strong> Name:</strong> {{firstName1 | uppercase}}</h6>
+<h6 class="card-title"> <i class="fa fa-paint-brush"  style="margin-right:2%;"  aria-hidden="true"></i><strong>Favourite color:</strong></h6><div align="center" ng-style="{'background-color':color}" ><h6><strong>Color</strong></h6></div>
+  <h6 class="card-title">  <i class="fa fa-birthday-cake" aria-hidden="true"></i><strong>Date of Birth Year:</strong> {{year}}</h6>
 
-
+</div>
   </div>
 </div>
-
-
+<div style="margin-left:40%; margin-top:2%;">
+<form ng-submit="getData(value)">
+<span style="color:#fff; font-size:20px; margin-right:1%;" >Value:</span><input type="number" style="width: 400px;" placeholder="Enter the page number from which you want data" id="url" size="35" ng-model="value.name"/>
+<br>
+<br>
+    <button id="service" type="submit" style="margin-left:15%;"  ng-click="clickHandler();" class="btn btn-outline-success">Success</button>
+</form>
+</div>
 </div>
 <br>
 <br>
-    <button style="margin-left:45%;"  ng-click="clickHandler();" class="btn btn-outline-success">Success</button>
+
 
 </div>
 

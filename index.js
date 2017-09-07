@@ -16,14 +16,14 @@ app.get('/akashShukla',function(req,res)
 
 
 
-app.get('/data',function(req,res)
+app.get('/data/:id',function(req,res)
 {
+
     async.parallel([
 
       function(callback) {
 
-
-                var url = "https://raw.githubusercontent.com/akash707/Json-Data-API/master/db.json";
+                var url = "https://reqres.in/api/users/"+req.params.id;
           request(url, function(err, response, body) {
              // JSON body
 
@@ -39,7 +39,7 @@ app.get('/data',function(req,res)
       function(callback) {
 
 
-         var url = "https://raw.githubusercontent.com/akash707/Json-Data-API/master/db1.json";
+         var url = "https://reqres.in/api/unknown/"+req.params.id;
         request(url, function(err, response, body) {
           if(err) { console.log(err); callback(true); return; }
           obj = JSON.parse(body);
